@@ -1,0 +1,24 @@
+= Github Web Site
+
+the `gh-pages` are for projects `bonbizin.github.io/<project-name>` while the `main` branch is used for rendering the user and org sites. 
+
+https://help.github.com/articles/what-are-github-pages/[Documentation on Github Pages]
+
+
+
+    git clone https://github.com/bonbizin/bonbizin.github.io.git
+    cd bonbizin.github.io/
+    git checkout --orphan gh-pages
+    
+# Remove all files from the old working tree    
+    git rm -rf .
+    
+    echo "My Page" > index.html
+    git add index.html
+    
+    git config --global user.email "team@bonbiz.in"
+    git config --global user.name "bonbizin"
+
+    git commit -a -m "First pages commit"
+    
+    
